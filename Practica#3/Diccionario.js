@@ -27,3 +27,9 @@ function IngresarValores()
    diccionario.push({Key: LLave, Value: Valor});
 
 }
+function mostrarDiccionario(){
+    document.getElementById("myTextarea").value = JSON.stringify(diccionario);
+    
+    alert(JSON.stringify(diccionario));
+     
+}
