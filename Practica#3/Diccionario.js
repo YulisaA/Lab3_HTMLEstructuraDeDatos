@@ -6,27 +6,41 @@ function IngresarValores()
    var Valor= "";
    LLave = document.getElementById("txtLlave").value;
    Valor = document.getElementById("txtValor").value;
-   if(Valor === "false")
+   var bandera = true;
+   for(var i = 0; i < diccionario.length; i++)
    {
-       Valor = false;
-   }
-   if(Valor === "true")
-   {
-       Valor = true;
-   }
-    
-   if(isNaN(parseInt(Valor)) === false)
-   {
+       if(diccionario[i].Key === LLave)
+       {
+           alert("Esa Llave ya fue utilizada")
+           bandera = false;
+           break;
+       }
        
-    Valor = parseInt(Valor);
    }
-   if(isNaN(parseFloat(Valor))=== false)
+   if(bandera)
    {
-       Valor = parseFloat(Valor);
+    if(Valor === "false")
+    {
+        Valor = false;
+    }
+    if(Valor === "true")
+    {
+        Valor = true;
+    }
+     
+    if(isNaN(parseInt(Valor)) === false)
+    {
+        
+     Valor = parseInt(Valor);
+    }
+    if(isNaN(parseFloat(Valor))=== false)
+    {
+        Valor = parseFloat(Valor);
+    }
+   
+     diccionario.push({Key: LLave, Value: Valor});
    }
-
-
-    diccionario.push({Key: LLave, Value: Valor});
+   
    
    
    
@@ -38,13 +52,15 @@ function mostrarJSON(){
 }
 
 function mostrarXML(){
+    var textoLlave = "";
+    var textoValor = "";
     var xmlText = "<?xml version = 1.0 encoding = ISO-8859-1 standalone = yes ?>" + "\r\n";
     xmlText += "<Dictionary>" + "\r\n" ;
     for(var i = 0; i < diccionario.length; i++)
     {
         xmlText += "   <Entry>" + "\r\n";
-        xmlText += "      <Key>" + diccionario[i].LLave + "</Key>" + "\r\n";
-        xmlText += "      <Value>" + diccionario[i].Valor + "</Key>" + "\r\n";
+        xmlText += "      <Key>" + (diccionario[i].Key) + "</Key>" + "\r\n";
+        xmlText += "      <Value>" +(diccionario[i].Value) + "</Key>" + "\r\n";
         xmlText += "   </Entry>" + "\r\n";
     }
     xmlText += "</Dictionary>" + "\r\n" ;

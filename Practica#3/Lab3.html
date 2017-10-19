@@ -6,12 +6,12 @@
             Laboratorio # 3
         </title>
     </head>
-    <body background = "Fondo.jpg">
+    <body style="background-color:rgb(241, 143, 30);">
 
             <style type="text/css">
                 
                 input.absoluto {
-                  top: 50px;
+                  top: 70px;
                   left: 600px;
                   position: absolute;
                 }
@@ -20,7 +20,7 @@
                 <style type="text/css">
                     
                     input.absoluto2 {
-                      top: 100px;
+                      top: 130px;
                       left: 600px;
                       position: absolute;
                     }
@@ -28,30 +28,28 @@
                     </style>
     <body>         
             <form action="Diccionario.js" method="get">
-                    <h1 align = "center"><i>Llave</i></h1>
-                    <input class = "absoluto" name="txtLlave" id = "txtLlave" >
-                    <h1 align = "center"><i>Valor</i></h1>
-                    <input class = "absoluto2" name="txtValor" id = "txtValor">
-                    <br><br>
-                    <center>
-                    <input type="button" value="Enviar" onclick= "IngresarValores()";>
-                    </center>
-                    <br><br>
-                    <center>
-                    <input type="button" value="Mostrar en JSON" onclick= "mostrarDiccionario()";>
-                    </center>
-                   
-                    <center>
-                            <textarea id="myTextarea" rows="10" cols="50">       
-                                    Resultado:                 
-                                    </textarea>
-                    </center>
-                    <input type="button" value="Mostrar JSON" onclick= "mostrarJSON()";>
-                    <input type="button" value="Mostrar XML" onclick= "mostrarXML()";>
-
-
-                    <textarea id="TextareaJSON" rows="10" cols="50">JSON</textarea>
-                    <textarea id="TextareaXML" rows="10" cols="50">XML</textarea>
+                <div style="border: 10px solid rgb(15, 6, 0);">
+                        <h1 align = "center"><i>Llave</i></h1>
+                        <input class = "absoluto" name="txtLlave" id = "txtLlave"  style="background-color: rgb(247, 123, 28);">
+                        <h1 align = "center"><i>Valor</i></h1>
+                        <input class = "absoluto2" name="txtValor" id = "txtValor" style="background-color: rgb(247, 123, 28);">
+                        <br><br>
+                        <center>
+                        <input type="button" value="Enviar" onclick= "IngresarValores()";>
+                        </center>
+                        <br><br>
+                        <center>
+                                <input type="button" value="Mostrar JSON" onclick= "mostrarJSON()";>
+                                <input type="button" value="Mostrar XML" onclick= "mostrarXML()";>
+            
+                            </center>  
+                            <center>
+                                    <textarea id="TextareaJSON" rows="10" cols="50" style="background-color: rgb(247, 123, 28);;">JSON</textarea>
+                                    <br><br>
+                                    <textarea id="TextareaXML" rows="10" cols="50" style="background-color: rgb(247, 123, 28);;">XML</textarea>
+                                    <br><br>
+                            </center>     
+                </div>
                     
             </form> 
      </body>
