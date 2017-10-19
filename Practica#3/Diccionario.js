@@ -24,7 +24,12 @@ function IngresarValores()
    {
        Valor = parseFloat(Valor);
    }
-   diccionario.push({Key: LLave, Value: Valor});
+
+
+    diccionario.push({Key: LLave, Value: Valor});
+   
+   
+   
 
 }
 function mostrarJSON(){
