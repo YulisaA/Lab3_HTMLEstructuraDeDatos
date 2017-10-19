@@ -4,19 +4,8 @@ function IngresarValores()
 {   
    var LLave = "";
    var Valor= "";
-   var Crear;
    LLave = document.getElementById("txtLlave").value;
    Valor = document.getElementById("txtValor").value;
-   if(isNaN(parseInt(LLave)) && LLave != "false" && LLave != "true")
-   {
-       LLave = LLave;
-       Crear = true;
-   }
-   else
-   {
-     alert("ingrese una llave en formato de texto, cree de nuevo la Llave");
-      Crear = false
-   }
    if(Valor === "false")
    {
        Valor = false;
@@ -36,10 +25,9 @@ function IngresarValores()
        Valor = parseFloat(Valor);
    }
 
-   if(Crear)
-   {
+
     diccionario.push({Key: LLave, Value: Valor});
-   }
+   
    
    
 
