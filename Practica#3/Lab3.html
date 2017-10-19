@@ -6,8 +6,7 @@
             Laboratorio # 3
         </title>
     </head>
-    <body>
-            
+    <body>         
             <form action="Diccionario.js" method="get">
                     Llave:<br>
                     <input type="text" name="txtLlave" id = "txtLlave">
@@ -17,13 +16,11 @@
                     <br><br>
                     <input type="button" value="Enviar" onclick= "IngresarValores('txtLlave','txtValor')";>
                     <br><br>
-                    <input type="button" value="Mostrar en JSON" onclick= "mostrarDiccionario()";>
+                    <input type="button" value="Mostrar JSON" onclick= "mostrarJSON()";>
+                    <input type="button" value="Mostrar XML" onclick= "mostrarXML()";>
 
-                    <textarea id="myTextarea" rows="10" cols="50">       
-                        Resultado:                 
-                        </textarea>
-
-
+                    <textarea id="TextareaJSON" rows="10" cols="50">JSON</textarea>
+                    <textarea id="TextareaXML" rows="10" cols="50">XML</textarea>
             </form> 
-            </body>
+     </body>
 </html>

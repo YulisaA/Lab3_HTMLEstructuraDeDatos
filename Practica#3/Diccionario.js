@@ -27,9 +27,22 @@ function IngresarValores()
    diccionario.push({Key: LLave, Value: Valor});
 
 }
-function mostrarDiccionario(){
-    document.getElementById("myTextarea").value = JSON.stringify(diccionario);
-    
-    alert(JSON.stringify(diccionario));
+function mostrarJSON(){
+    document.getElementById("TextareaJSON").value = JSON.stringify(diccionario);
+     
+}
+function mostrarXML(){
+    var xmlText = "<?xml version = 1.0 encoding = ISO-8859-1 standalone = yes ?>" + "\r\n";
+    xmlText += "<Dictionary>" + "\r\n" ;
+    for(var i = 0; i < diccionario.length; i++)
+    {
+        xmlText += "   <Entry>" + "\r\n";
+        xmlText += "      <Key>" + diccionario[i].LLave + "</Key>" + "\r\n";
+        xmlText += "      <Value>" + diccionario[i].Valor + "</Key>" + "\r\n";
+        xmlText += "   </Entry>" + "\r\n";
+    }
+    xmlText += "</Dictionary>" + "\r\n" ;
+
+    document.getElementById("TextareaXML").value = xmlText;
      
 }
