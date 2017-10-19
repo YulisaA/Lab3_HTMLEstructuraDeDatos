@@ -5,52 +5,28 @@
         <title>
             Laboratorio # 3
         </title>
-    </head>
-    <body style="background-color:rgb(241, 143, 30);">
-
-            <style type="text/css">
-                
-                input.absoluto {
-                  top: 70px;
-                  left: 600px;
-                  position: absolute;
-                }
-                
-                </style>
-                <style type="text/css">
-                    
-                    input.absoluto2 {
-                      top: 130px;
-                      left: 600px;
-                      position: absolute;
-                    }
-                    
-                    </style>
+        <link rel="stylesheet" href="style.css">
+    </head>        
     <body>         
-            <form action="Diccionario.js" method="get">
-                <div style="border: 10px solid rgb(15, 6, 0);">
-                        <h1 align = "center"><i>Llave</i></h1>
-                        <input class = "absoluto" name="txtLlave" id = "txtLlave"  style="background-color: rgb(247, 123, 28);">
-                        <h1 align = "center"><i>Valor</i></h1>
-                        <input class = "absoluto2" name="txtValor" id = "txtValor" style="background-color: rgb(247, 123, 28);">
-                        <br><br>
-                        <center>
-                        <input type="button" value="Enviar" onclick= "IngresarValores()";>
-                        </center>
-                        <br><br>
-                        <center>
-                                <input type="button" value="Mostrar JSON" onclick= "mostrarJSON()";>
-                                <input type="button" value="Mostrar XML" onclick= "mostrarXML()";>
             
+                <div class="form">
+                        <h1 align = "center"><i>Llave</i></h1>
+                        <input type="text" name="txtLlave" id = "txtLlave" style="background-color: tomato" >
+                        <h1 align = "center"><i>Valor</i></h1>
+                        <input type="text" name="txtValor" id = "txtValor" style="background-color: tomato">
+                        <button onclick= "IngresarValores()">Enviar</button>
+                        <button onclick= "mostrarJSON()">Mostrar JSON</button>
+                        <button onclick= "mostrarXML()">Mostrar XML</button>
+                               
                             </center>  
                             <center>
-                                    <textarea id="TextareaJSON" rows="10" cols="50" style="background-color: rgb(247, 123, 28);;">JSON</textarea>
+                                    <textarea id="TextareaJSON" rows="10" cols="50" style="background-color: tomato">JSON</textarea>
                                     <br><br>
-                                    <textarea id="TextareaXML" rows="10" cols="50" style="background-color: rgb(247, 123, 28);;">XML</textarea>
+                                    <textarea id="TextareaXML" rows="10" cols="50" style="background-color: tomato">XML</textarea>
                                     <br><br>
                             </center>     
                 </div>
                     
-            </form> 
+            
      </body>
 </html>
