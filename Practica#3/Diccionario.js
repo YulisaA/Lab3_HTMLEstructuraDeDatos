@@ -36,6 +36,7 @@ function mostrarJSON(){
     document.getElementById("TextareaJSON").value = JSON.stringify(diccionario);
      
 }
+
 function mostrarXML(){
     var xmlText = "<?xml version = 1.0 encoding = ISO-8859-1 standalone = yes ?>" + "\r\n";
     xmlText += "<Dictionary>" + "\r\n" ;
